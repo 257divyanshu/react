@@ -18,8 +18,7 @@ rootElement.render(newElement);
 // the packages on which our project is dependent on are called dependencies
 
 // after doing npm init we get a package.json file into our project
-// package.json is a configuration for our npm
-// package.json manages the dependencies of our project
+// package.json is a configuration file which manages the dependencies of our project
 
 // the most important package in our project is our bundler
 // a bundler packages our app so that it can be shipped to production
@@ -88,18 +87,18 @@ rootElement.render(newElement);
 // - creates dev built
 // - does HMR
 // - creates a local server
-// - comes with a file watching algorithm (which is written in c++) 
 // - caches the builts (for faster builts)
 // - does image optimization
 // - does minification
 // - will bundle our project
 // - consistent hashing 
 // - code splittingg
-// - differential bundling
 // - tree shaking
 // - does diagnostics
 // - allows us to host our project into https
 // - different bundle for prod build
+// - comes with a file watching algorithm (which is written in c++) 
+// - differential bundling
 
 // prod built takes more time than dev build
 

@@ -1,0 +1,4 @@
+text ellipsis
+- https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+- needs three properties : text-ellipsis overflow-hidden whitespace-nowrap
+

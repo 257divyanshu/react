@@ -16,7 +16,7 @@
 
 // react does not only works on browsers
 // it also works in mobile devices and many other environments
-// for every other environment react provides a special library for ease of development, for example react provides reactDOM for buildint UI for browser applications
+// for every other environment react provides a special library for ease of development, for example react provides reactDOM for browser applications
 
 // basic hello world program using react
 // const newElement = React.createElement('div',{},'this is a new div');
@@ -24,7 +24,7 @@
 // rootElement.render(newElement);
 
 // creating an element is a core thing of react
-// createing a root and rendering something into it is the work of reactDOM
+// creating a root and rendering something into it is the work of reactDOM
 
 // react was built with the philosophy that we want to manipulate the DOM using javascript
 
@@ -67,7 +67,7 @@ const rootElement = ReactDOM.createRoot(document.getElementById('root'));
 console.log(newElement)
 rootElement.render(newElement);
 
-// but our code is getting messsy
+// but our code is getting messy
 // for this we have jsx
 // react can be written without jsx
 
@@ -80,7 +80,7 @@ rootElement.render(newElement);
 // if something already existed in the root element then the render method will override the content of the root element
 // but the elements other than the root element aren't touched
 
-// react can be used in a particula section of our website because it's a library
+// react can be used in a particular section of our website because it's a library
 
 // HOMEWORK
 // what are CDN links?

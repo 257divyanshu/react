@@ -1,0 +1,31 @@
+about useEffect() hook
+- if we don't give any dependency array, the useEffect() hook will be called every time our components renders
+- if we provide an empty dependency array, the useEffect() hook is called only on initial render
+- if we put something inside the dependency array, then the useEffect() hook will be called only when one or more dependency changes
+
+about useState() hook
+- used for creating local state variables inside functional components
+- always call useState() hook on the top of the functional components
+- never use useState() hook inside conditionals, loops or nested function (this may lead to inconsistencies)
+
+routing
+- we will be installing react-router-dom
+- we will first make an about page
+- before creating routes we need to make a routing configuration in the root script of our project
+- for createing a routing configuration we need to use the createBrowserRouter() function
+- this function takes an array as argument
+- this array argument is an array of object 
+- this object contain two things, one path and one element
+- inside the path we will specify the path
+- inside the element we will specify the component we want to render
+- now we have created our routing configuration
+- but just creating a browser configuration won't work
+- we need to render this configuration into our page 
+- for this we need to use the routerProvider 
+- earlier we were just rendering our AppLayout component
+- but now we need to render our routing configuration
+- synatx for rendering a router configuration is : rootElement.render(<routerProvider router={RouterConfigName}/>)
+- there are many types of router (in react-router-dom)
+- but we should use createBrowserRouter for basic purposes
+
+stopped at 32

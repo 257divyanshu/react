@@ -1,0 +1,46 @@
+// two objects that we got after inlcuding CDN links
+// console.log(React);
+// console.log(ReactDOM);
+
+// basic hello world program using react
+// const newElement = React.createElement('div',{},'this is a new div');
+// const rootElement = ReactDOM.createRoot(document.getElementById('root'));
+// rootElement.render(newElement);
+
+// the most expensive operation in a webpage is DOM manipulation
+// all the javascript libraries and frameworks are trying to optimize this
+
+// creating an nested structure using react
+const newElement = React.createElement(
+    'div',
+    {
+        'id':'mainDiv',
+        'className': 'elems',
+    },
+    [
+        React.createElement(
+            'div',
+            {
+                'id':'childDiv1',
+                'key':'div1',
+            },
+            "first div",
+        ),
+        React.createElement(
+            'div',
+            {
+                'id':'childDiv2',
+                'key':'div2',
+            },
+            "second div",
+        ),
+    ]
+)
+
+// react cdn links should come before react dom cdn links
+// and the both should come before main script
+
+// react element at the end of the day is a javascript object
+// the render method takes the javascript object (created by the react element) and converts it into an HTML element
+
+// but the elements other than the root element aren't touched

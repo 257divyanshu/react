@@ -1,0 +1,46 @@
+// npx commands are used for executing packages
+
+// creating scripts
+// for dev build : "start" : "parcel index.html"
+// for prod build : "build" : "parcel build index.html"
+
+// npm run start for dev build
+// npm run build for prod build
+
+// react.createElement gives us an javascript object 
+// render() method takes this object and converts it into an HTML element and puts it into the DOM
+
+// using jsx to create elements
+// const newElement = <div>Mission Placement</div>;
+
+// jsx is not a part of react
+// react can be written without jsx
+// jsx is a syntactical sugar
+// behind the scenes jsx code is converted into react.createElement method() by transpilation tools like Babel
+
+// js engine can't understand jsx code
+
+// babel is not created by facebook
+// babel also converts modern ES6 code into old browser compatible javascript
+
+// use () for multi line jsx
+
+// a functional components is a function that returns a react element or jsx
+
+// name of component should start with capital letter
+// rendering a component we need to use <ComponentName/>
+
+// functional components convention
+// const NewElement2 = () => <div>Mission Placement</div>;
+
+// component composition
+// having components inside components
+
+// {} for embedding javascript
+
+// ways to render a component 
+// {<NewElement2/>}
+// {<NewElement2></NewElement2>}
+// {{NewElement2()}}
+
+// the content of {} is used but after sanitization

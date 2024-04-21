@@ -1,0 +1,89 @@
+● What is a Microservice?
+● What is Monolith architecture?
+● What is the difference between Monolith and Microservice?
+● Why do we need a useEffect Hook?
+● What is Optional Chaining?
+● What is Shimmer UI?
+● What is the difference between JS expression and JS statement
+● What is Conditional Rendering, explain with a code example
+● What is CORS?
+● What is async and await?
+● What is the use of `const json = await data.json();` in getRestaurants()
+
+● Play with the useEffect Hook to see when it is called?(before or after render)
+● Play with dependency array in useEffect Hook
+● Play with the developer console by putting a debugger in render and useEffect
+● Call an actual API to get data
+● Handle Error in your API call
+● Build Shimmer UI when data in not loaded
+● Render your UI with actual API data
+● Make Search functionality work
+● Make a Login Logout button which toggles with a state
+
+● What is a Microservice?
+- the entire application is broken down into a collection of loosely coupled services.
+- components are almost independent
+- each service can be deployed independently
+- each service can be scaled independent
+- different teams work on different services simultaneously, making development and deployment faster
+- services are developed using the most appropriate tech stack
+- failure of a service is less likely to affect other services.
+- complexity is introduced by inter service communication and data consistency
+- but they offer greater flexibility as compared to monolith
+
+● What is Monolith architecture?
+- the entire application is built as a single indivisble unit.
+- all the components are tightly integrated
+- all the components are deployed as a single unit 
+- scalling a monolith architecture can be challenging 
+- developers work on the entire code, this makes development and deployment slower
+- all the components within the application share the same tech stack
+- a failure on one part of monolithic application can bring down the entire system
+- development and initial setup is simpler as compared to microservices
+- but they become complex and difficult to maintain when codebase grows 
+
+● Why do we need a useEffect Hook?
+- used for managing side effects in functional components
+- side effects refer to any code that interacts with the outer world, such as fetching data from API, subscribing to events, manipulating the DOM
+- allows us to specify what should happen after react has rendered and before react unmounts a component 
+- used to handling cleanup tasks when components unmount (prevents memory leaks)
+- used for managing async operations like fetching data from APIs
+- by default, useEffect runs after every render
+- promotes separation of concerns by separating side effects from core logic
+- about the dependency array
+  - dependency array is optional
+  - a dependency array contains zero or more dependencies
+  - if one or more dependency changes between to consecutive renders then the useEffect hook is called
+  - if none of the dependencies change then the useEffect hook won't be called
+  - if dependency array is kept empty then the useEffect hook will be called after every render
+
+● What is Optional Chaining?
+- allows us to safely access nested properties without causing an error if an intermediary property along the chain is null or undefined
+- using optional chainging on methods : objName.methodName?.()
+- may not be supported in older browsers
+- used when accessing nested properties of data fetched from API
+- eliminates the need to manually checking if intermediary value exists or not
+
+● What is Shimmer UI?
+- is a user interface design pattern
+- it provides users with feedback during content loading or data fetching processes
+- It involves displaying subtle animations or placeholders that mimic the appearance of content being loaded, creating the impression of activity and responsiveness
+- reduces percieved wait times
+
+● What is the difference between JS expression and JS statement
+- expressions produce a value, statements don't
+- expressions are used to compute values, statements are used to perform actions
+- expressions can appear within statements, but statements cannot appear within expressions
+- statements end with a semicolon, expressions may or may not
+
+● What is Conditional Rendering, explain with a code example
+- refers to the process of conditionally displaying or hiding elements in the user interface based on certain conditions or states of the application
+- allows developers to dynamically control what content is rendered to the user based on variables, state values, or other factor
+- can be done using if statements
+- can be done using conditional operators
+
+● What is CORS?
+
+● What is async and await?
+
+● What is the use of `const json = await data.json();` in getRestaurants()

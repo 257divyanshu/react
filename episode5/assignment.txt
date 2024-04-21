@@ -1,0 +1,56 @@
+Assignment
+● What is the difference between Named Export, Default export and * as export?
+● What is the importance of config.js file
+● What are React Hooks?
+● Why do we need a useState Hook?
+Coding Assignment:
+● Clean up your code
+● Create a Folder Structure for your app
+● Make different files for each Components
+● Create a config file
+● Use all types of import and export
+● Create a Search Box in your App
+● Use useState to create a variable and bind it to the input box
+● Try to make your search bar work
+References
+● Code Link - https://bitbucket.org/namastedev/namaste-react-live/src/master/
+
+● What is the difference between Named Export, Default export and * as export?
+- named exports : allow us to export multiple functions, objects, or variables from a module.
+- default exports :  allows us to export only one function, object, or variable as the default export of a module. 
+- * exports and imports : allows us to import all exports from a module and bind them to a single variable. there is not special syntax of * export, we used named exports only, but there is special syntax for * import, to use the stuff that have been * imported first we need to use the name we had set while importing and then and . and then the name of the stuff
+- named export : export const add = (a, b) => a + b;
+- named import : import { add } from './module';
+- default export : export default multiply;
+- default import : import customMultiply from './module';
+- * import : import * as myModule from './module';
+             console.log(myModule.foo()); // Output: 'foo'
+             console.log(myModule.bar()); // Output: 'bar'
+
+● What is the importance of config.js file
+- is created manually
+- used for centralized configuration management
+- used for setting environment specific configurations. it handles these environment-specific configurations by providing different values for the same parameters based on the environment.
+- sensitive information like API keys or credentials should not be hardcoded directly into the source code for security reasons. Instead, they can be stored securely in the config.js file
+- making testing and debugging testing configuration settings easier
+
+● What are React Hooks?
+- they enable developers to use state and other React features in functional components, which were previously only available in class components
+- but the problem with class components was that they were pretty verbose
+- we can also created custom hooks
+- Rules : 
+  - hooks shouldn't be called inside loops, conditionals and nested functions
+  - hooks should be called from functional components and not from class components or regular functions
+  - custom hooks should always start with the prefix use to differentiate them from regular functions
+- Benefits : 
+  - simples syntax as we don't need to use class components
+  - functional components with hooks offer more predictable behavior as compared to class components with complex lifecycle methods
+  - some hooks like useMemo and useCallback improve the performance by preventing unnecessary re-renders
+- hooks are only available from React 16.8 and later
+
+● Why do we need a useState Hook?
+- react encourage functional components due to their simplicity, readability and performance Benefits
+- but they didn't had state management capabilities
+- useState does the work here
+- this hook is used to declare state variables within function's body
+- functional components using hooks are like pure components which do not rely on external state or effects, this makes testing them and debugging them easier

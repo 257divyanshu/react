@@ -1,0 +1,156 @@
+QUESTIONS : 
+● What is Emmet?
+● Difference between a Library and Framework?
+● What is CDN? Why do we use it?
+● Why is React known as React?
+● What is crossorigin in script tag? 
+● What is diference between React and ReactDOM
+● What is difference between react.development.js and react.production.js files via CDN?
+● What is async and defer? - see my Youtube video ;
+
+● EMMET
+- is a plugin for code editors and text editors
+- it improves the productivity when writing HTML, CSS and other web developoment code
+- it is a shorthand too
+- that allows developers to write code faster
+- by using abbreviations and shortcuts 
+- that expand into full code blocks or snippets
+- it speeds up the development process
+
+● LIBRARY v/s FRAMEWORK
+- Control Flow
+  - library : developers control the application flow, developers decide when and where to use the library functions
+  - framework : developers do not control the application flow, the framework control it, developers write code that conforms to the framework's structure 
+- Scope & Usage
+  - library : is a collection of functions and utilities, libraries tend to focus on particular domain of functionality
+  - framework : provides a foundation for building an application, it often includes multiple libraries and tools 
+- Flexibility
+  - library : are more flexible because developers decide which functions to use and how to integrate them into their projects
+  - framework : offer less flexibility because developers must work within framework's structure and conventions, this makes development easier but limits customization
+- Learning Curve
+  - library : have lower learning curve as they provide specific, focused functionality that can be easily understood and implemented 
+  - framework : has a steeper learning curve as they require deveopers to understand the framework's architecture and conventions
+- Dependency
+  - library : is often an optional component that can be added to a project if needed, removing and replacing a library is usually straightforward
+  - framework : is integral to an application and servers as the foundation, switching frameworks can be challenging as it may require significant changes in the codebase
+- Code Ownership
+  - library : developers own the application code
+  - framework : much of application structure and behavior is controlled by the framework 
+
+● CDN
+- stands for content delivery networks
+- is a system of distributed servers
+- that work together
+- to deliver web content and resources to users
+- efficiently and quickly
+- they are designed to optimize the delivery of content such as images, videos, scripts, stylesheets, and other web assets
+- servers are located at different geographical locations
+
+● BENEFITS OF USING CDN
+- reduces latency and improves loading times as content is served from the nearest located server 
+- improves performance and reduces load on the origin server by caching frequently accessed content at the servers
+- allows seamless scaling by handling large traffic spikes without performance degradation by distributing the load accross multiple servers
+- often include security features such as DDoS protection, SSL/TLS support and web application firewall
+- optimizes content delivery by compressing files, resizing images and using other techniques to minimize the data transfer and improve performance
+- ensures availabity of resources even if some servers fail
+- improves the overall performance of the website by offloading traffic from the origin server
+
+● WHY IS REACT KNOWN AS REACT
+- because it reacts quickly to changes 
+- without reloading the whole page
+- it uses virtual DOM to efficiently update parts of webpage
+- it's built around components that react and update
+
+● CROSS ORIGIN
+- is used to control how the browser handle the loading of external scripts from different origins (domains other than the one from which the webpage is being served)
+- this attribute helps manage the security and privacy implications of loading scripts from external resources
+- this attribute can take three values : anonymous , use-credentials , no value
+- anonymous : is the default value for the attribute , it means that browser won't send credentials (like cookies, HTTP authentication or client certificates) when requesting the script from a different origin , if the script is loaded successfully it will be executed , if there is an error loading the script , the browser will not provide detailed error information
+- user-credentials : the browse will send credentials (like cookies, HTTP authentication , client certificates) when requesting the script from different origin , if the request requires credentials (this is the case when the script is hosted on a server that requires authentication) these values may be necessary , if there is an error loading the script the browser will reprot the error and may block the script from executing
+- no value : it this attribute is not given any value, then the behavior is the same as if it were set to anonymous 
+
+● CASES WHEN CREDENTAILS ARE NECESSARY 
+- a script from an API that provides personalized data for a logged in user, requires the use to authenticate
+- if a script from a domain uses cookies to identfy the user and personalize the user experience then the requests need to be sent with credentials
+- a script from an internal server that hosts company resources and requires employee authentication needs the employee to send credentials with the request
+- my example : edtech website
+
+● CASES WHEN CREDENTAILS ARE NOT NECESSARY 
+- when loading scripts from public CDNs like (react CDNs)
+- when loadting static resources such as images or stylesheets from another domain, for example a script from a domain hosting fonts or icons 
+
+● REACT v/s REACT-DOM
+- Purpose 
+  - React : provides core functionality of the react library that is creating components and managing their states , it doesn't include platform specific code
+  - ReactDOM : provides DOM specified functionalities for react allowing use to render react components into browser's DOM , 
+- Rendering 
+  - React : doesn't include any code for rendering components
+  - ReactDOM : includes code for rendering components
+- Browse Specific Features
+  - React : doesn't provide browser specific features
+  - ReactDOM : provides browser specific features
+- Compatibility
+  - React : is compatible with variety of environments
+  - ReactDOM : isn't compatible with variety of environments, it's compatible with browse environments only
+
+● REACT.DEVELOPMENT.JS v/s REACT.PRODUCTION.JS
+- Environment
+  - react.development.js is designed for development phase
+  - react.production.js is designed for production phase 
+- Debugging
+  - react.development.js provides helpfule error messages, warnings, and additional debugging information
+  - react.production.js doesn't provide such features
+- Performance
+  - react.development.js is slow because of additional checks and warnings
+  - react.production.js is fast because it doesn't contain any additional checks and warnings
+- File Size
+  - react.development.js is larger in size due to additional debugging information and error messages  
+  - react.production.js is smaller in size because it doesn't include debugging information and error messages 
+- Warnings
+  - react.development.js includes warnings for deprecated APIs, incorrect usage, and other issues
+  - react.production.js doesn't includes such warnings
+- Error Handling
+  - react.development.js errors are descreptive and include helpful information
+  - react.production.js errors are less descreptive and concise
+  
+● ASYNC v/s DEFER
+- are attributes for the script tag
+- if none of them is specified
+  - when a script is encountered, HTML parsing pauses, script will be fetched, script will be executed, HTML parsing resumes
+- if async attribute is used
+  - when a script is encountered, script will be fethed without pausing HTML parsing, when script is loaded, HTML parsing pauses, script gets exected, HTML parsing resumes
+- if defer attribute is used 
+  - when a script is encountered, script will be fetched without pausing HTML parsing, when script is loaded, HTML parsing doesn't pause, when HTML parsing is over, then the script will be executed
+- more information
+  - the async attribute doesn't gurantee the order of execution of scripts
+  - but defer does
+- when to use async and when to use defer 
+  - use async only if scripts are interdependent (for example analytics scripts)
+  - use defer when scripts are defended
+
+---------------------------------------------------------------------------------------------
+
+● WHY ARE DOM MANIPULATIONS COSTLY
+- because dom manipulations trigger reflow and repaint processes
+
+● REFLOW
+- means recalculating the layout of elements on the webpage when there is a change in DOM or CSS.
+- multiple reflows can cause delays and interruptions in page rendering, leading to less smooth user experience
+
+● REPAINT
+- means redrawing elements in the webpage to reflect changes in their appearance (such as color, background and visibility)
+- it may cause visual issues like flickering when triggered frequently or inconsistently.
+
+● WHY IS REFLOW MORE EXPENSIVE THAN REPAINT
+- reflow might cause cascading effects but repaint won't
+- changing the dimension of an element can propagate layout changes to other elements as well, but changing the visual appearance of an element won't propagate visual appearance changes to other elements
+
+REFERENCES:
+- https://beta.reactjs.org/apis/react/createElement
+- https://www.youtube.com/watch?v=IrHmpdORLu8
+
+SEARCH
+- DDoS protection
+- SSL/TLS support
+- web application firewall
+- what is CAPTCHA

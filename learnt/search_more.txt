@@ -1,0 +1,3 @@
+log the React object into the console
+look at list of methods
+study all of them

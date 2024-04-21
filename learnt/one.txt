@@ -1,0 +1,10 @@
+text ellipsis
+- https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+- needs three properties : text-ellipsis overflow-hidden whitespace-nowrap
+
+object fit property
+- fill: this is the default value which stretches the image to fit the content box, regardless of its aspect-ratio.
+- contain: increases or decreases the size of the image to fill the box whilst preserving its aspect-ratio.
+- cover: the image will fill the height and width of its box, once again maintaining its aspect ratio but often cropping the image in the process.
+- none: image will ignore the height and width of the parent and retain its original size.
+- scale-down: the image will compare the difference between none and contain in order to find the smallest concrete object size.

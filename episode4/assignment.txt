@@ -1,0 +1,103 @@
+Assignment
+● Is JSX mandatory for React?
+● Is ES6 mandatory for React?
+● {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+● How can I write comments in JSX?
+● What is <React.Fragment></React.Fragment> and <></> ?
+● What is Virtual DOM?
+● What is Reconciliation in React?
+● What is React Fiber?
+● Why we need keys in React? When do we need keys in React?
+● Can we use index as keys in React?
+● What is props in React? 
+● What is a Config Driven UI ?
+
+References
+● React without JSX: https://reactjs.org/docs/react-without-jsx.html
+● Virtual DOM: https://reactjs.org/docs/faq-internals.html
+● Reconciliation: https://reactjs.org/docs/reconciliation.html
+● React Fiber Architecture: https://github.com/acdlite/react-fiber-architecture
+● React Without ES6: https://reactjs.org/docs/react-without-es6.html
+● Index Keys as Anti-Pattern:
+https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/
+
+● Is JSX mandatory for React?
+- no, but
+- using JSX can make our code more readable and maintainable
+
+● Is ES6 mandatory for React?
+- no, but
+- it offers many features and improvements that make developing React applications easier, more efficient, and more expressive.
+
+● How can I write comments in JSX?
+- usng {/* */}
+
+● What is <React.Fragment></React.Fragment> and <></> ?
+- is a way to group multiple child elements without adding an extra DOM node to the output.
+- are used when we want to return multiple elements from a component but you don't want them to be wrapped in a parent element like a div or span.
+
+● What is Virtual DOM?
+- is a light-weight, in memory representation of the actual DOM, 
+- it mirrors the structure of the real DOM, but is not connected to the actual web page,
+- it exists purely in memory as a javascript object
+- bts :
+  - virtual dom is created
+  - when updations are made, a new virtual dom is made
+  - differences between the two are calculated (diffing algorithm)
+  - only the necessary changes are made (reconciliation process)
+- benefits
+  - improves performance (as only the parts of DOM that have changed are udpated)
+  - predictable rendering behavior (beause it's managed by a library)
+
+● What is Reconciliation in React?
+- involves efficiently updating the actual DOM based on changes in the application's state or props.
+- benefits : 
+  - Reconciliation optimizes the rendering process, leading to faster and smoother updates to the UI.
+  - sures that updates are applied consistently and predictably.
+
+● What is React Fiber?
+- React Fiber is the core engine and re-implementation of React's internal rendering algorithm.
+- was introduced in React 16
+- aysnc rendering
+  - Fiber supports asynchronous rendering, which allows React to pause, interrupt, and resume rendering work as needed. This leads to smoother UI updates and better handling of user input.
+- prioritzation
+  - Fiber allows prioritization of rendering tasks based on their importance, enabling React to handle high-priority tasks 
+- it allows the rendering process to be broken down into smaller units of work, enabling React to prioritize and manage rendering tasks more efficiently.
+- benefits : 
+  - By prioritizing rendering tasks, Fiber helps manage resources more efficiently.
+  - the overall responsivess of the application is enhanced because using react fibre rendering process is handled efficiently
+
+● Why we need keys in React? When do we need keys in React?
+- They provide a unique identifier for each element in a list, allowing React to track changes, additions, and deletions more accurately. 
+- This is essential for rendering lists effectively and avoiding unnecessary re-renders.
+- in the diffine algorithm, Keys allow React to compare lists efficiently and pinpoint which elements have been added, removed, or updated.
+- Without keys, React may have difficulty tracking changes in a list, leading to unnecessary re-renders and inefficiencies. Keys help minimize this issue by providing a stable reference for each element.
+- when do we need them : 
+  - when rendering a list of elements
+  - when rendering conditionally
+  - when rendering components dynamically (based on user input or API data)
+  - when nesting elements
+
+● Can we use index as keys in React?
+- yes we can, but
+- Using indices as keys can cause problems because indices are not stable identifiers in a list. Elements should have stable keys that uniquely identify them, so React can track them accurately during rendering and reconciliation. When indices are used as keys, issues can arise if the indices of elements change due to updates, deletions, or insertions in the list. This can lead to:
+
+● What is props in React? 
+- Props are data passed from a parent component to a child component. They serve as input values for the child component and allow the parent to configure the child's behavior and appearance.
+- In the child component, props are accessed through the props object 
+- using props makes components reusable
+
+● What is a Config Driven UI ?
+- is an user interfaces whose layout, behavior, and content of the UI are determined by configuration data rather than being hardcoded in the application code. 
+- configurations can either be static (from JSON or XML files) or dynamic (from APIs, databases, and external services)
+- advantages : 
+  - UI can be prototyped reapidly by modifying the configuration files
+- challenges : 
+  - adds complexity
+  - complicates debugging a bit
+  - 
+
+--------------------------------------------------------------------------------------------
+
+● Diffing Algorithm and Reconciliation
+- the minimum differences or updation to be made are calculated by the diffing algorithm and the rencociliation is the process that executes the minimum updation required

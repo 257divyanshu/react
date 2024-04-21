@@ -1,0 +1,75 @@
+Topics
+● JSX
+● React.createElement vs JSX
+● Benefits of JSX
+● Behind the Scenes of JSX
+● Babel & parcel role in JSX
+● Components
+● Functional Components
+● Composing Components
+
+Assignment
+● What is JSX?
+● Superpowers of JSX
+● Role of type attribute in script tag? What options can I use there?
+● {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+
+● Babel: https://babeljs.io/
+● Attribute Type: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-type
+
+● JSX
+- JSX (JavaScript XML) is a syntax extension for JavaScript used in React development
+- It allows developers to write HTML-like code directly within JavaScript
+- JSX provides a way to structure components and UI elements in a more readable and expressive way, closely resembling HTML.
+- key features : 
+  - HTML-like Syntax
+  - JavaScript Integration
+- JSX attributes are written in camel case instead of kebab case
+
+● REACT.CREATEELEMENT v/s JSX
+- JSX is transformed to react.createElement
+- React.createElement() is a function that returns react element
+- JSX is a syntax extnesion that resembles HTML
+- JSX is more readable and concise than react.createElement
+- JSX allows us to embedd javascript using the {}
+- JSX improves the developer experience
+
+● BENEFITS OF USING JSX
+- readable and declarative code
+- expressive components
+- javascript integration
+- component composition
+- inline styling
+
+● BTS OF JSX
+- JSX is converted into react.createElement() function call by tools like Babel
+
+● BABEL
+- transpiles JSX to react.createElement
+- transpiles modern ES6 code to old browser compatible javascript
+- provides polyfills for missing features in older browsers, ensuring that our application runs consistently across different environments
+- also generates source map during the transformation process, which maps the transformed code back to the original source code (these source maps are helpful for debuggging and understanding error messages in the browser as they allow us to see the original source code)
+- comes integrated with built tools like webpack and parcel
+
+● COMPONENTS
+- components are the building blocks of a React application.
+- used to create reusable, modular, and self-contained units of UI, making it easier to design, develop, and maintain complex applications.
+- components are independent, isolated pieces of UI.
+
+● COMPOSING COMPONENTS
+- involves nesting one component inside another and passing data and behavior as props from parent to child
+
+● {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+- {TitleComponent} refers to the function or the class itself and not the instance of the component, this syntax will be used to pass the TitleComponent as a prop to another component
+- <TitleComponent/> represents as instance of the TitleComponent component, it is a shorthand for writing <TitleComponent></TitleComponent>
+
+--------------------------------------------------------------------------------------------
+
+● FUNCTIONAL COMPONENTS v/s CLASS COMPONENTS
+- Functional components are stateless components (which are defined as javascript functions)
+- Class components are stateful components (which are defined as javascript classes)
+- Functional components are easy to write and test
+- Class components are more verbose
+- Functional components do not have state or lifecycle methods
+- Class components have state and lifecycle methods
+- 

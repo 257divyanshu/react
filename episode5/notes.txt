@@ -1,0 +1,81 @@
+everything we are doing with react can also be done using HTML, CSS and JavaScript 
+
+restructuring our codebase
+- convention 1 : code to be kept in src folder 
+- convention 2 : components to be stored inside a component folder (which will be kept inside the src folder)
+- convention 3 : the name of the component file and the name of the functional component should be same (should begin with a capital letter)
+- convention 4 : hardcoded data shouldn't be kept in component folder, mockdata should be placed in a mockdata.js file in the utils folder, and constants like URL parts should be stored in a constants.jsfile in the utils folder 
+- convention 5 : the contents of the constants.js (which are to be exported) to be named will all caps
+- we an also have .jsx extension instead of .js extension
+
+default export
+- export default Name;
+
+named export
+- export const Name1 = "something";
+- export const Name2 = "somethingAgain";
+
+default import
+- import Name from "";
+
+named import
+- import {Name1, Name2} from "";
+
+we can also have a default export with named exports in a single file
+
+updating a simple variable won't update the UI, for this to happen we need to have a state variable
+
+building a button that filters out the top rated restaurants
+- we made a filter button put it inside the body tag 
+- then we attached an onClick event to it
+- the onClick function filters the array of restaurants
+- but the UI didn't change
+- we want our UI to change when the configs change
+
+We need to keep our UI layer and data layer in sync
+- this is what all the frameworks and libraries are trying to do
+
+Now, our resList is a normal variable
+- we can make resList a super powerful variables
+- we will make resList a state variable
+- for creating this state variable we need to use a react hook called useState
+
+Hooks
+- is basically a normal javascript function
+- hooks are like utility functions 
+- hooks too were written by facebook developer
+- two important react hooks
+- useState and useEffect
+
+useState hook
+- is used to create a superpowerful react variable or a state variable
+- we need to import this hook from react (named import)
+- React is default exported from react
+- other things (like hooks) are named exported from react
+
+syntax for using useState hook
+- const [resList,setResList] = useState(restaurants);
+- resList is the name of the state variable
+- setResList is the name of the function that will be used to change the state variable
+- we cannot change a state variables without using the special function that the useState function returns us
+- the argument inside the useState function is the default value for the state variable
+- the useState function returns us an array (which we have destructured)
+- there is no other way to update a state varialbe (other than using the speical function)
+- convention is use the setStateVariableName
+- whenever a state variable updates react re-renders the component
+
+Reconcilliation Algorithm
+- also known as react fiber
+- a virtual DOM is created 
+- when changes are made in the file, a new virtual DOM is created
+- then minimum difference between the two virtual DOM is calculated using the diiffing algorithm
+- then these minimum differences are made into the DOM
+- this reduces the amount of DOM manipulation that needs to done
+
+Virtual DOM object
+- the logged reactelement object is the virtual dom object
+
+ReactFiber came in react 16
+
+Why react is fast?
+- because react does DOM manipulations efficienntly (using virtual DOM)

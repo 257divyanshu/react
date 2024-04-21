@@ -1,0 +1,71 @@
+MONOLITH
+- everything (UI code, notification code, database code) inside a single bundle 
+- single team handling the whole application
+- single tech stack for the whole application
+
+MICROSERVICES
+- different service different bundle 
+- UI service separate , authentication service separate , notification service separate , database connectivity service separate , backend service separate
+- in micro-servides we follow single responsibility principle
+- separation of concerns
+- different teams handle different services of the application
+- these services can communicate with each other
+- our project comes inside the UI service
+- can have different tech stack for different services
+- different services can be deployed to different ports
+- all these prots will be mapped to a single domain name
+
+TWO APPROACHES OF FETCHING AND DISPLAYING DATA
+- first : application loaded , make API call  , get data , render data 
+- second : application loaded , render data , make API call , get data , render data again 
+
+SECOND APPROACH IS BETTER
+- because our page is frozen for some time in the first approach
+- because our page shows something immediately in second approach
+- but we will be rendering twice
+- but this won't cause problem
+- because react renders data qucily
+- many renders are considerable but a single additional render is not worth considering
+
+USEEFFECT HOOK
+- named import useEffect hook from react
+- useEffect hook takes two arguments
+- first argument is a callback function
+- second argument is a dependency array
+- the useEffect hook is called when the component is rendered (if the dependency array is [])
+- we will use this useEffect to fetch the data
+
+FETCH BLOCKED 
+- by CORS policy
+- we are being blocked by browser
+- we can override this using chrome extension
+
+INSIDE THE USESTATE'S CALLBACK
+- we will set the resList as the array that we have fetched from the swiggy's api
+
+OPTIONAL CHAINING
+
+SHIMMER UI
+
+CONDITIONAL RENDERING
+
+WHY NORMAL VARIABLES DON'T DO THE UI UPDATION JOB
+- because when normal variables update, react doesn't come to know about it
+- but react is very fond of state variables and when they update, react re-renders the component
+
+WHAT GETS RE-RENDERED
+- the whole component (which contains the state variable)
+- but only the required part gets updated, rest stuff remains intact
+
+SEARCH NOT WORKING
+- input element's value attribute has been set to the state variable that we have made (searchVal)
+- onClick of button we will console.log(searchVal)
+- when we type someting inside the input box, the value of the input is still tied to the searchVal state variable
+- what we need to do is we need to change the searchVal when we type something in the input box
+- for this we need to use the onChange event handler
+- after this things start working
+- behind the scenes the whole body component is getting re-rendered when we type something inside the input box (when there some change in the text content of the search input field)
+
+WHY IS REACT FAST?
+- because of it's reconcilliation algorithm becaue of the react fiber
+- 

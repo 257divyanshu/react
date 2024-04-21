@@ -64,7 +64,7 @@ const newElement = React.createElement(
     ]
 )
 const rootElement = ReactDOM.createRoot(document.getElementById('root'));
-console.log(newElement)
+// console.log(newElement)
 rootElement.render(newElement);
 
 // but our code is getting messy

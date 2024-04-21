@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client"
 
 // npx 
-// commans are used for executing packages
+// commands are used for executing packages
 
 // creating scripts
 // for dev build : "start" : "parcel index.html"
@@ -16,7 +16,7 @@ import ReactDOM from "react-dom/client"
 // react.createElement gives us an javascript object 
 // render() method takes this object and converts it into an HTML element and puts it into the DOM
 
-// use not rendered on the root element
+// use "not rendered" on the root element
 
 // using jsx to create elements
 // const newElement = <div>Mission Placement</div>;
@@ -131,4 +131,3 @@ rootElement.render(<ParentElement/>);
 // the content of {} is used but after sanitization
 
 // our react code is readable because of jsx
-

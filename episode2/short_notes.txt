@@ -1,0 +1,66 @@
+// react alone cannot make our app fast
+// react needs the help of many other packages to get the stuff done
+
+// npm is a package manager that comes with node js
+// all the packages are hosted on the npm registory
+// we use npm to install and manage dependencies
+
+// after doing npm init we get a package.json file into our project
+// package.json is a configuration file which manages the dependencies of our project
+
+// vite, parcel, webpack are all bundlers
+
+// bundler will be installed as a dev dependency
+// using the command : npm install -d parcel
+
+// react and react-dom will be installed as normal dependencies
+
+// on installing a dependency we got a new file named package-lock.json
+// package-lock.json keeps the record of exact version of our dependencies
+
+// we also got node_modules folder on installing dependencies
+// node_modules contains all the code that we fetched from npm
+
+// every dependency present in the node_modules folder has it's own package.json file
+
+// what to push and what to not push
+// don't push node_moduels , dist folder , .parcel-cache folder
+// push package.json file and packge-lock.json file
+
+// node_modules can be re-generated using package.json and package-lock.json files
+// to regenerate it run command : npm install
+
+// starting a dev build using the command : npx parcel index.html
+
+// hmr doesn't work if we are using only the react cdn links (because we aren't using parcel now)
+
+// after installing react and react dom
+// set script type to module
+// import react and react-dom into your script
+// use react and react dom apis
+
+// normal browser scripts cannot have import or export statements
+
+// creating a prod built using the command : npx parcel build index.html
+// error : we need to remove the main from the package.json file
+
+// dist folder contains the production ready compressed and minified files
+
+// .parcel-cache contains the cached files (so that further builds can be fast)
+
+// what parcel does for us
+// - creates dev built
+// - does HMR
+// - creates a local server
+// - comes with a file watching algorithm (which is written in c++) 
+// - caches the builts (for faster builts)
+// - does image optimization
+// - does minification
+// - will bundle our project
+// - consistent hashing 
+// - code splittingg
+// - differential bundling
+// - tree shaking
+// - does diagnostics
+// - allows us to host our project into https
+// - different bundle for prod build

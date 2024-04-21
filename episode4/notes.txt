@@ -1,0 +1,16 @@
+PROPS
+- props to a component are like arguments to a function
+- arguments to components are passed as key value pairs : key="value" without any commas 
+- all these arguments (key="value" pairs) are wrapped inside the props object   
+- to access the argument value we need to use props.keyname
+
+CONFIG DRIVEN UI
+- user interfrace driven by data (configs)
+
+KEYS
+- keys help react to identify similar elements (like elements belonging to same parent or list elements of unordered/ordered list) uniquely
+- react wants to identify the elements uniquely so that it can make decision which element to render and which element to not
+- if it can uniquely identify elements, then it will render new and updated elements
+- if it can't then it will re-render those elements again and again (this is redundant re-rendering)
+- indices shouldn't be used as keys
+- not giving keys makes a huge performance hit

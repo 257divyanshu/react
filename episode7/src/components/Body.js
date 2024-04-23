@@ -22,7 +22,11 @@ const Body = () => {
         console.log(json); 
         console.log(json.data); 
         console.log(json.data.cards);
-        const newArray = json.data.cards.filter((obj)=>obj.card.card["@type"]=="type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget").filter((obj)=>obj.card.card.header).filter((obj)=>obj.card.card.header.title=="Top restaurant chains in Bilaspur");
+        let newArray = json.data.cards.filter((obj)=>obj.card.card["@type"]=="type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget");
+        console.log(newArray);
+        newArray = newArray.filter((obj)=>obj.card.card.header);
+        console.log(newArray);
+        newArray = newArray.filter((obj)=>obj.card.card.header.title=="Top restaurant chains in Bilaspur");
         console.log(newArray);
         console.log(newArray[0]);
         console.log(newArray[0].card);

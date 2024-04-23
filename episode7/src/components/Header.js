@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import {createBrowserRouter , RouterProvider , Outlet, Link} from "react-router-dom";
 
 const Header = () => {
     const [loginVal,setLogInVal] = useState("logout");
@@ -10,9 +11,13 @@ const Header = () => {
             </div>
             <div className="nav-items">
                 <ul className="flex border-2 border-solid border-white p-[10px] w-[500px] justify-between">
-                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]">Home</li>
-                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]">About Us</li>
-                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]">Contact Us</li>
+                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]"><Link to="/">Home</Link></li>
+                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]"><Link to="/about">About</Link></li>
+                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]"><Link to="/contact">Contact</Link></li>
+                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]">Cart</li>
+                    {/* <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]"><a href="/">Home</a></li>
+                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]"><a href="/about">About</a></li>
+                    <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]"><a href="/contact">Contact</a></li> */}
                     <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]">Cart</li>
                     <li className="border-2 border-solid border-white mx-[5px] px-[5px] text-[20px]" onClick={
                         function(){

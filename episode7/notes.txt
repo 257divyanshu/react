@@ -14,7 +14,7 @@ routing
 - before creating routes we need to make a routing configuration in the root script of our project
 - for createing a routing configuration we need to use the createBrowserRouter() function
 - this function takes an array as argument
-- this array argument is an array of object 
+- this array argument is an array of objects
 - this object contain two things, one path and one element
 - inside the path we will specify the path
 - inside the element we will specify the component we want to render
@@ -27,5 +27,38 @@ routing
 - synatx for rendering a router configuration is : rootElement.render(<routerProvider router={RouterConfigName}/>)
 - there are many types of router (in react-router-dom)
 - but we should use createBrowserRouter for basic purposes
+- now we will make a component that will handle error on some routes
+- make a new component
+- exportt the component from it's file
+- import the component into the mainScript
+- now in a specific route (the router whose error needs to be handled), add a thrid key name errorElement and set it's value to the error component 
+- now this works
+- to get a detailed error object in the console use the useRouteError hook in the error component file
+- just import the useRouteError hook from react-router-dom then so the object it returns in some variable and then log it into the console
+- now we will be creating child routers and also keep the header stick for every page
+- for this we need the Outlet from the react-router-dom
+- we will use this Outlet below the header component which is kept inside the AppLayout component 
+- for creating child routers we will set one as the main route
+- main route will be /
+- now this main route object will be given a new key value pair with the key name as children
+- the value of this children key will be an array of objects of routes
+- the first object of the array of object will be the default router with path set /
+- the main route is set to /
+- and the main route's first child is set to /
+- the routes under the main router will be rendered below the header component
+- thus keeping th heading intact
+- using achror tags for navigation
+- give href = routname (destined route name)
+- but using a isn't a good practice
+- because this refreshes the whole page
+- to prevent this we will be using the Link tag
+- we will be able to navigate to a new page without re-loading the whole page
+- this make our application a single page application
+- types of routing : client side routing and server side routing
+- client side routing 
+- server side routing : separate .html pages for separate things, when link is clicked, network call is made, .html page is fetched, and then we get our page 
+- now we will make dynamic paths (for making those cards clickable)
+- /:resid this means tha resid part is dynamic
+- to get this resid in the Restaurant component we will use the 
 
 stopped at 32

@@ -3,9 +3,11 @@ import ReactDOM from "react-dom/client"
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { SAMPLE } from "./utils/constants";
-import {createBrowserRouter , RouterProvider} from "react-router-dom";
+import {createBrowserRouter , RouterProvider , Outlet} from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ErrorComp from "./components/ErrorComp";
+import Restaurant from "./components/Restaurant";
 
 console.log(SAMPLE);
 
@@ -13,7 +15,7 @@ const AppLayout = () => {
     return (
         <div className="app">
             <Header/>
-            <Body/>
+            <Outlet/>
         </div>
     )
 };
@@ -22,14 +24,25 @@ const AppRouter = createBrowserRouter([
     {
         path: "/",
         element: <AppLayout/>,
-    },
-    {
-        path: "/about",
-        element: <About/>,
-    },
-    {
-        path: "/contact",
-        element: <Contact/>,
+        children: [
+            {
+                path: "/",
+                element: <Body/>,
+            },
+            {
+                path: "/about",
+                element: <About/>,
+            },
+            {
+                path: "/contact",
+                element: <Contact/>,
+            },
+            {
+                path: "/restaurant/:resid",
+                element: <Restaurant/>,
+            },
+        ],
+        errorElement: <ErrorComp/>,
     },
 ]);
 

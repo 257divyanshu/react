@@ -1,0 +1,4 @@
+about useEffect hook
+- if not given a second argument, will be called for every render
+- if given an empty array as a second argument, will be called only after the first render
+- if give some dependencies then will be called when one or more dependencies change
